@@ -1,8 +1,9 @@
 XML2TXT = xml2txt
 
 .PHONY: all
+.SUFFIXES: .xml .txt
 
-all: broadcast.txt
+all: doc/broadcast.txt
 
-broadcast.txt: src/broadcast.xml
-	$(XML2TXT) src/broadcast.xml > $@
+.xml.txt:
+	$(XML2TXT) $< > $@
