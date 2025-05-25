@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Specification>
+	<Author>
+		<Name>Nishi</Name>
+		<Organization>Pyrite Development Team</Organization>
+		<Email>nishi@nishi.boats</Email>
+	</Author>
+	<Author>
+		<Name>penguin2233</Name>
+		<Organization>Pyrite Development Team</Organization>
+		<Email>dm4.bade@gmail.com</Email>
+	</Author>
+	<Meta>
+		<Date>May 2025</Date>
+		<Title>GoldFish Broadcast Protocol</Title>
+		<Short>GFBP</Short>
+		<Organization>Pyrite Development Team</Organization>
+		<Authors>Nishi &amp; Penguin2233</Authors>
+	</Meta>
+	<Section Name="Status of This Memo">
+		<Content>
+			This memo is under public-domain. Distribution of this memo is unlimited.
+		</Content>
+	</Section>
+	<Section Name="Abstract">
+		<Content>
+			The GoldFish Broadcast Protocol (GFBP) is an application-level protocol to allow clients to broadcast themselves to other clients, to find other multiplayer connection with player names.
+		</Content>
+	</Section>
+	<TOC />
+	<Numbered>
+		<Section Name="Introduction">
+			<Section Name="Purpose">
+				<Content>
+					The GoldFish Broadcast Protocol (GFBP) is an application-level protocol to allow clients to broadcast themselves to other clients, to find other multiplayer connection with player names. This specification describes the featues that must be implemented to use GFBP clients and servers.
+				</Content>
+			</Section>
+		</Section>
+		<Section Name="Conformance Requirements">
+			<Content>
+				The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED",  "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
+			</Content>
+		</Section>
+	</Numbered>
+</Specification>

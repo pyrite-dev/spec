@@ -1,0 +1,118 @@
+Pyrite Development Team                                            Nishi
+                                                 Pyrite Development Team
+                                                             penguin2233
+                                                 Pyrite Development Team
+                                                                May 2025
+
+                      GoldFish Broadcast Protocol
+
+Status of This Memo
+
+   This memo is under public-domain. Distribution of this memo is
+   unlimited.
+
+Abstract
+
+   The GoldFish Broadcast Protocol (GFBP) is an application-level
+   protocol to allow clients to broadcast themselves to other clients,
+   to find other multiplayer connection with player names.
+
+Table of Contents
+
+   1.   Introduction  . . . . . . . . . . . . . . . . . . . . . . . .  1
+   1.1. Purpose . . . . . . . . . . . . . . . . . . . . . . . . . . .  1
+   2.   Conformance Requirements  . . . . . . . . . . . . . . . . . .  1
+
+1. Introduction
+
+1.1. Purpose
+
+   The GoldFish Broadcast Protocol (GFBP) is an application-level
+   protocol to allow clients to broadcast themselves to other clients,
+   to find other multiplayer connection with player names. This
+   specification describes the featues that must be implemented to use
+   GFBP clients and servers.
+
+2. Conformance Requirements
+
+   The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
+   "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this
+   document are to be interpreted as described in RFC 2119.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Nishi & Penguin2233                                             [Page 1]
+GFBP                  GoldFish Broadcast Protocol               May 2025
+
+
+Authors' Addresses
+
+   Nishi
+   Pyrite Development Team
+   
+   Email: nishi@nishi.boats
+   
+   
+   penguin2233
+   Pyrite Development Team
+   
+   Email: dm4.bade@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Nishi & Penguin2233                                             [Page 2]
