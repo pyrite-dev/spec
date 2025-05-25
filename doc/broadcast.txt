@@ -30,8 +30,8 @@ Table of Contents
    The GoldFish Broadcast Protocol (GFBP) is an application-level
    protocol to allow clients to broadcast themselves to other clients,
    to find other multiplayer connection with player names. This
-   specification describes the featues that must be implemented to use
-   GFBP clients and servers.
+   specification describes the featues that are RECOMMENDED be
+   implemented for GFBP clients and servers.
 
 2. Conformance Requirements
 
