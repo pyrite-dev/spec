@@ -35,11 +35,58 @@
 					The GoldFish Broadcast Protocol (GFBP) is an application-level protocol to allow clients to broadcast themselves to other clients, to find other multiplayer connection with player names. This specification describes the featues that are RECOMMENDED be implemented for GFBP clients and servers.
 				</Content>
 			</Section>
+			<Section Name="Terminology">
+				<Content>
+					This specification uses a number of terms to refer to the roles played by participants in, and objects of, the GFBP communciation.
+				</Content>
+				<List>
+					<Content>
+						Frame
+					</Content>
+					<IndentSection>
+						<Content>
+							The basic unit of GFBP communication, consisting of a structured frame matching the definition in Section 3 and transmitted via the connection.
+						</Content>
+					</IndentSection>
+				</List>
+			</Section>
 		</Section>
 		<Section Name="Conformance Requirements">
 			<Content>
 				The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED",  "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
 			</Content>
+		</Section>
+		<Section Name="Protocol structure">
+			<Content>
+				All numbers are in big-endian.
+			</Content>
+			<Section Name="Frame">
+				<Center>
+					<Content>
+						<![CDATA[
+ 0                   1                   2
+ 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3
++---------------+-------------------------------+
+|    Opcode     |        Payload length         |
++---------------+-------------------------------+
+|                 Payload Data                  |
++-----------------------------------------------+
+:            Payload Data continues...          :
++ - - - - - - - - - - - - - - - - - - - - - - - +
+|            Payload Data continues...          |
++-----------------------------------------------+
+						]]>
+					</Content>
+				</Center>
+				<Content>
+					Opcode: 8 bits
+				</Content>
+				<IndentSection>
+					<Content>
+						Defines the interpretation of the "Paylaod Data". If an unknown opcode is received, the server MUST return error code.
+					</Content>
+				</IndentSection>
+			</Section>
 		</Section>
 	</Numbered>
 </Specification>

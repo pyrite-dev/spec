@@ -21,7 +21,10 @@ Table of Contents
 
    1.   Introduction  . . . . . . . . . . . . . . . . . . . . . . . .  1
    1.1. Purpose . . . . . . . . . . . . . . . . . . . . . . . . . . .  1
+   1.2. Terminology . . . . . . . . . . . . . . . . . . . . . . . . .  1
    2.   Conformance Requirements  . . . . . . . . . . . . . . . . . .  1
+   3.   Protocol structure  . . . . . . . . . . . . . . . . . . . . .  1
+   3.1. Frame . . . . . . . . . . . . . . . . . . . . . . . . . . . .  2
 
 1. Introduction
 
@@ -33,6 +36,17 @@ Table of Contents
    specification describes the featues that are RECOMMENDED be
    implemented for GFBP clients and servers.
 
+1.2. Terminology
+
+   This specification uses a number of terms to refer to the roles
+   played by participants in, and objects of, the GFBP communciation.
+
+   o  Frame
+
+         The basic unit of GFBP communication, consisting of a
+         structured frame matching the definition in Section 3 and
+         transmitted via the connection.
+
 2. Conformance Requirements
 
    The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
@@ -42,21 +56,66 @@ Table of Contents
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Nishi & Penguin2233                                             [Page 1]
+GFBP                  GoldFish Broadcast Protocol               May 2025
+
+
+3. Protocol structure
+
+   All numbers are in big-endian.
+
+3.1. Frame
+
+               0                   1                   2
+            0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3
+           +---------------+-------------------------------+
+           |    Opcode     |        Payload length         |
+           +---------------+-------------------------------+
+           |                 Payload Data                  |
+           +-----------------------------------------------+
+           :            Payload Data continues...          :
+           + - - - - - - - - - - - - - - - - - - - - - - - +
+           |            Payload Data continues...          |
+           +-----------------------------------------------+
+
+   Opcode: 8 bits
+
+      Defines the interpretation of the "Paylaod Data". If an unknown
+      opcode is received, the server MUST return error code.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Nishi & Penguin2233                                             [Page 2]
 GFBP                  GoldFish Broadcast Protocol               May 2025
 
 
@@ -115,4 +174,4 @@ Authors' Addresses
 
 
 
-Nishi & Penguin2233                                             [Page 2]
+Nishi & Penguin2233                                             [Page 3]
