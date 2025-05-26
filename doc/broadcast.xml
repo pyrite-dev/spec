@@ -67,7 +67,7 @@
  0                   1                   2
  0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3
 +---------------+-------------------------------+
-|    Opcode     |        Payload length         |
+|    Opcode     |        Payload Length         |
 +---------------+-------------------------------+
 |                 Payload Data                  |
 +-----------------------------------------------+
@@ -83,9 +83,25 @@
 				</Content>
 				<IndentSection>
 					<Content>
-						Defines the interpretation of the "Paylaod Data". If an unknown opcode is received, the server MUST return error code.
+						Defines the interpretation of the "Payload Data". If an unknown opcode is received, the server MUST return error code.
+					</Content>
+					<List>
+						<Content>
+
+						</Content>
+					</List>
+				</IndentSection>
+				<Content>
+					Payload Length: 16 bits
+				</Content>
+				<IndentSection>
+					<Content>
+						Size of "Payload Data" in bytes.
 					</Content>
 				</IndentSection>
+				<Content>
+					Payload Data: "Payload Length" bytes
+				</Content>
 			</Section>
 		</Section>
 	</Numbered>
