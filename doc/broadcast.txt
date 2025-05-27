@@ -28,8 +28,9 @@ Table of Contents
    3.2.   Opcodes . . . . . . . . . . . . . . . . . . . . . . . . . .  2
    3.3.   Payload Data Structure  . . . . . . . . . . . . . . . . . .  2
    3.3.1. Query Frame . . . . . . . . . . . . . . . . . . . . . . . .  2
-   3.3.2. Answer Frame  . . . . . . . . . . . . . . . . . . . . . . .  2
-   3.3.3. Error Frame . . . . . . . . . . . . . . . . . . . . . . . .  2
+   3.3.2. Register Frame  . . . . . . . . . . . . . . . . . . . . . .  2
+   3.3.3. Answer Frame  . . . . . . . . . . . . . . . . . . . . . . .  3
+   3.3.4. Error Frame . . . . . . . . . . . . . . . . . . . . . . . .  3
 
 1. Introduction
 
@@ -55,7 +56,6 @@ Table of Contents
 
 
 
-
 Nishi & Penguin2233                                             [Page 1]
 GFBP                  GoldFish Broadcast Protocol               May 2025
 
@@ -72,7 +72,7 @@ GFBP                  GoldFish Broadcast Protocol               May 2025
 
 3.1. Frame
 
-               0                   1                   2
+            0                   1                   2
             0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3
            +---------------+-------------------------------+
            |    Opcode     |        Payload Length         |
@@ -86,14 +86,13 @@ GFBP                  GoldFish Broadcast Protocol               May 2025
 
    Opcode: 8 bits
 
-      Defines the interpretation of the "Payload Data". If an unknown
+      Defines the interpretation of the Payload Data. If an unknown
       opcode is received, the receiver MUST send error code.
       See section 3.2 for opcodes.
 
-
    Payload Length: 16 bits
 
-      Size of "Payload Data" in bytes.
+      Size of Payload Data in bytes.
 
    Payload Data: "Payload Length" bytes
 
@@ -101,7 +100,9 @@ GFBP                  GoldFish Broadcast Protocol               May 2025
 
    o  %00 denotes a query frame.
 
-   o  %01 denotes an answer frame.
+   o  %01 denotes a register frame.
+
+   o  %02 denotes an answer frame.
 
    o  %FF denotes an error frame.
 
@@ -109,8 +110,7 @@ GFBP                  GoldFish Broadcast Protocol               May 2025
 
 3.3.1. Query Frame
 
-3.3.2. Answer Frame
-
+   Payload Data MUST be a non-NULL terminated string of username.
 
 
 
@@ -119,27 +119,27 @@ Nishi & Penguin2233                                             [Page 2]
 GFBP                  GoldFish Broadcast Protocol               May 2025
 
 
-3.3.3. Error Frame
+3.3.2. Register Frame
 
 
+3.3.3. Answer Frame
 
+                            0
+                            0 1 2 3 4 5 6 7
+                           +-------------+-+
+                           |  Reserved   |A|
+                           |             |U|
+                           |             |T|
+                           |             |H|
+                           +-------------+-+
 
+   AUTH: 1 bit
 
+      MUST be set if server needs authentication.
 
+3.3.4. Error Frame
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+   Payload Data MUST be a non-NULL terminated string of username.
 
 
 

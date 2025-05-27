@@ -62,7 +62,7 @@
 			</Content>
 			<Section Name="Frame">
 				<Center>
-					<Content>
+					<RawContent>
 						<![CDATA[
  0                   1                   2
  0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3
@@ -76,28 +76,23 @@
 |            Payload Data continues...          |
 +-----------------------------------------------+
 						]]>
-					</Content>
+					</RawContent>
 				</Center>
 				<Content>
 					Opcode: 8 bits
 				</Content>
 				<IndentSection>
 					<Content>
-						Defines the interpretation of the "Payload Data". If an unknown opcode is received, the receiver MUST send error code.
+						Defines the interpretation of the Payload Data. If an unknown opcode is received, the receiver MUST send error code.
 						See section 3.2 for opcodes.
 					</Content>
-					<List>
-						<Content>
-
-						</Content>
-					</List>
 				</IndentSection>
 				<Content>
 					Payload Length: 16 bits
 				</Content>
 				<IndentSection>
 					<Content>
-						Size of "Payload Data" in bytes.
+						Size of Payload Data in bytes.
 					</Content>
 				</IndentSection>
 				<Content>
@@ -112,7 +107,12 @@
 				</List>
 				<List>
 					<Content>
-						%01 denotes an answer frame.
+						%01 denotes a register frame.
+					</Content>
+				</List>
+				<List>
+					<Content>
+						%02 denotes an answer frame.
 					</Content>
 				</List>
 				<List>
@@ -123,10 +123,42 @@
 			</Section>
 			<Section Name="Payload Data Structure">
 				<Section Name="Query Frame">
+					<Content>
+						Payload Data MUST be a non-NULL terminated string of username.
+					</Content>
+				</Section>
+				<Section Name="Register Frame">
+					<Content>
+					</Content>
 				</Section>
 				<Section Name="Answer Frame">
+					<Center>
+						<RawContent>
+							<![CDATA[
+ 0
+ 0 1 2 3 4 5 6 7
++-------------+-+
+|  Reserved   |A|
+|             |U|
+|             |T|
+|             |H|
++-------------+-+
+							]]>
+						</RawContent>
+					</Center>
+					<Content>
+						AUTH: 1 bit
+					</Content>
+					<IndentSection>
+						<Content>
+							MUST be set if server needs authentication.
+						</Content>
+					</IndentSection>
 				</Section>
 				<Section Name="Error Frame">
+					<Content>
+						Payload Data MUST be a non-NULL terminated string of username.
+					</Content>
 				</Section>
 			</Section>
 		</Section>
