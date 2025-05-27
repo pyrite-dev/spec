@@ -56,7 +56,7 @@
 				The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED",  "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
 			</Content>
 		</Section>
-		<Section Name="Protocol structure">
+		<Section Name="Protocol Structure">
 			<Content>
 				All numbers are in big-endian.
 			</Content>
@@ -83,7 +83,8 @@
 				</Content>
 				<IndentSection>
 					<Content>
-						Defines the interpretation of the "Payload Data". If an unknown opcode is received, the server MUST return error code.
+						Defines the interpretation of the "Payload Data". If an unknown opcode is received, the receiver MUST send error code.
+						See section 3.2 for opcodes.
 					</Content>
 					<List>
 						<Content>
@@ -102,6 +103,31 @@
 				<Content>
 					Payload Data: "Payload Length" bytes
 				</Content>
+			</Section>
+			<Section Name="Opcodes">
+				<List>
+					<Content>
+						%00 denotes a query frame.
+					</Content>
+				</List>
+				<List>
+					<Content>
+						%01 denotes an answer frame.
+					</Content>
+				</List>
+				<List>
+					<Content>
+						%FF denotes an error frame.
+					</Content>
+				</List>
+			</Section>
+			<Section Name="Payload Data Structure">
+				<Section Name="Query Frame">
+				</Section>
+				<Section Name="Answer Frame">
+				</Section>
+				<Section Name="Error Frame">
+				</Section>
 			</Section>
 		</Section>
 	</Numbered>
