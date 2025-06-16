@@ -1,0 +1,118 @@
+Pyrite Development Team                                            Nishi
+                                                 Pyrite Development Team
+                                                             penguin2233
+                                                 Pyrite Development Team
+                                                               Maelstrom
+                                                 Pyrite Development Team
+                                                               June 2025
+
+                           GoldFish Protocol
+
+Abstract
+
+   TBD
+
+Table of Contents
+
+   1.   Introduction  . . . . . . . . . . . . . . . . . . . . . . . .  1
+   1.1. Background  . . . . . . . . . . . . . . . . . . . . . . . . .  1
+   1.2. Protocol Overview . . . . . . . . . . . . . . . . . . . . . .  1
+
+1. Introduction
+
+1.1. Background
+
+   TBD
+
+1.2. Protocol Overview
+
+   TBD
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Nishi, Penguin, Maelstrom                                       [Page 1]
+GFP                        GoldFish Protocol                   June 2025
+
+
+Authors' Addresses
+
+   Nishi
+   Pyrite Development Team
+   
+   Email: nishi@nishi.boats
+   
+   
+   penguin2233
+   Pyrite Development Team
+   
+   Maelstrom
+   Pyrite Development Team
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Nishi, Penguin, Maelstrom                                       [Page 2]

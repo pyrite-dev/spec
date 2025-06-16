@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE Specification SYSTEM "xml2txt.dtd">
+<Specification>
+	<Author>
+		<Name>Nishi</Name>
+		<Organization>Pyrite Development Team</Organization>
+		<Email>nishi@nishi.boats</Email>
+	</Author>
+	<Author>
+		<Name>penguin2233</Name>
+		<Organization>Pyrite Development Team</Organization>
+	</Author>
+	<Author>
+		<Name>Maelstrom</Name>
+		<Organization>Pyrite Development Team</Organization>
+	</Author>
+	<Meta>
+		<Date>June 2025</Date>
+		<Title>GoldFish Protocol</Title>
+		<Short>GFP</Short>
+		<Organization>Pyrite Development Team</Organization>
+		<Authors>Nishi, Penguin, Maelstrom</Authors>
+	</Meta>
+	<Section Name="Abstract">
+		<Content>
+			TBD
+		</Content>
+	</Section>
+	<TOC />
+	<Numbered>
+		<Section Name="Introduction">
+			<Section Name="Background">
+				<Content>
+					TBD
+				</Content>
+			</Section>
+			<Section Name="Protocol Overview">
+				<Content>
+					TBD
+				</Content>
+			</Section>
+		</Section>
+	</Numbered>
+</Specification>
