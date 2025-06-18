@@ -19,26 +19,39 @@
 		<Title>The GoldFish Control Protocol</Title>
 		<Short>GFCP</Short>
 		<Organization>Pyrite Development Team</Organization>
-		<Authors>Nishi, Penguin, Maelstrom</Authors>
+		<Authors>Nishi, et al</Authors>
 	</Meta>
 	<Section Name="Abstract">
 		<Content>
-			TBD
+			The GoldFish Control Protocol (GFCP) is an application-level protoocol to control the behavior of a server-side and client-side engine over TCP/IP.
 		</Content>
 	</Section>
 	<TOC />
 	<Numbered>
 		<Section Name="Introduction">
-			<Section Name="Background">
+			<Section Name="Purpose">
 				<Content>
-					TBD
+					The GoldFish Control Protocol (GFCP) is an application-level protoocol to control the behavior of a server-side and client-side engine over TCP/IP.
 				</Content>
 			</Section>
 			<Section Name="Protocol Overview">
 				<Content>
-					TBD
+					The GFCP protocol is based on a request/response paradigm. A client establishes a connection with a server and waits until server sends ready packet, then start sending a request to the server. The server responds with a packet with same structure as client packet.
+
+					The GFCP protocol specifies TCP/IP port 7468 as default port.
 				</Content>
 			</Section>
+		</Section>
+		<Section Name="Conformance Requirements">
+			<Content>
+				The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
+			</Content>
+			<Section Name="Terminology and Other Conventions">
+			</Section>
+		</Section>
+		<Section Name="Opening Handshake">
+			<Content>
+			</Content>
 		</Section>
 	</Numbered>
 </Specification>

@@ -10,23 +10,45 @@ Pyrite Development Team                                            Nishi
 
 Abstract
 
-   TBD
+   The GoldFish Control Protocol (GFCP) is an application-level
+   protoocol to control the behavior of a server-side and client-side
+   engine over TCP/IP.
 
 Table of Contents
 
    1.   Introduction  . . . . . . . . . . . . . . . . . . . . . . . .  1
-   1.1. Background  . . . . . . . . . . . . . . . . . . . . . . . . .  1
+   1.1. Purpose . . . . . . . . . . . . . . . . . . . . . . . . . . .  1
    1.2. Protocol Overview . . . . . . . . . . . . . . . . . . . . . .  1
+   2.   Conformance Requirements  . . . . . . . . . . . . . . . . . .  1
+   2.1. Terminology and Other Conventions . . . . . . . . . . . . . .  1
+   3.   Opening Handshake . . . . . . . . . . . . . . . . . . . . . .  1
 
 1. Introduction
 
-1.1. Background
+1.1. Purpose
 
-   TBD
+   The GoldFish Control Protocol (GFCP) is an application-level
+   protoocol to control the behavior of a server-side and client-side
+   engine over TCP/IP.
 
 1.2. Protocol Overview
 
-   TBD
+   The GFCP protocol is based on a request/response paradigm. A client
+   establishes a connection with a server and waits until server sends
+   ready packet, then start sending a request to the server. The server
+   responds with a packet with same structure as client packet.
+   
+   The GFCP protocol specifies TCP/IP port 7468 as default port.
+
+2. Conformance Requirements
+
+   The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
+   "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this
+   document are to be interpreted as described in RFC 2119.
+
+2.1. Terminology and Other Conventions
+
+3. Opening Handshake
 
 
 
@@ -34,29 +56,7 @@ Table of Contents
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Nishi, Penguin, Maelstrom                                       [Page 1]
+Nishi, et al                                                    [Page 1]
 GFCP                 The GoldFish Control Protocol             June 2025
 
 
@@ -115,4 +115,4 @@ Authors' Addresses
 
 
 
-Nishi, Penguin, Maelstrom                                       [Page 2]
+Nishi, et al                                                    [Page 2]
