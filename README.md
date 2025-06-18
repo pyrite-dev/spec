@@ -6,4 +6,4 @@ Protocol specifications are under CC0, and generated using [xml2txt](https://git
 
 ## Specifications
 
- - [GoldFish Broadcast Protocol](/doc/broadcast.txt)
+ - [The GoldFish Control Protocol](/doc/control.txt)

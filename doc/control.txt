@@ -6,7 +6,7 @@ Pyrite Development Team                                            Nishi
                                                  Pyrite Development Team
                                                                June 2025
 
-                           GoldFish Protocol
+                     The GoldFish Control Protocol
 
 Abstract
 
@@ -57,7 +57,7 @@ Table of Contents
 
 
 Nishi, Penguin, Maelstrom                                       [Page 1]
-GFP                        GoldFish Protocol                   June 2025
+GFCP                 The GoldFish Control Protocol             June 2025
 
 
 Authors' Addresses
