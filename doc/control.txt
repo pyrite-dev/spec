@@ -27,7 +27,7 @@ Table of Contents
    3.2.1. Request - Not Authenticated State . . . . . . . . . . . . .  2
    3.2.2. Request - Authenticated State . . . . . . . . . . . . . . .  2
    3.3.   Response  . . . . . . . . . . . . . . . . . . . . . . . . .  2
-   3.3.1. SVRR response . . . . . . . . . . . . . . . . . . . . . . .  2
+   3.3.1. SRDY response . . . . . . . . . . . . . . . . . . . . . . .  2
 
 1. Introduction
 
@@ -78,6 +78,20 @@ GFCP                 The GoldFish Control Protocol             June 2025
    |                        data continued                         |
    +---------------------------------------------------------------+
 
+   Opcode: 32 bits
+
+      Defines the interpretation of the "data". MUST be big endian.
+      4 characters opcode which is used in document can be converted to
+      the number using below method (C):
+
+         const char* method = "SRDY";
+         uint32_t number = *(uint32_t*)method;
+         number = htonl(number);
+
+   Length: 16 bits
+
+      Defines the length of the "data". MUST be big endian.
+
 3.2. Request
 
 3.2.1. Request - Not Authenticated State
@@ -88,23 +102,9 @@ GFCP                 The GoldFish Control Protocol             June 2025
 
 3.3. Response
 
-3.3.1. SVRR response
+3.3.1. SRDY response
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   Indicates the server is ready to accept client requests.
 
 
 

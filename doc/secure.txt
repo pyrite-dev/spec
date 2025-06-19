@@ -1,0 +1,118 @@
+Pyrite Development Team                                            Nishi
+                                                 Pyrite Development Team
+                                                               June 2025
+
+                       The GoldFish Secure Layer
+
+Abstract
+
+
+Table of Contents
+
+   1.   Introduction  . . . . . . . . . . . . . . . . . . . . . . . .  1
+   1.1. Purpose . . . . . . . . . . . . . . . . . . . . . . . . . . .  1
+   1.2. Protocol Overview . . . . . . . . . . . . . . . . . . . . . .  1
+   2.   Conformance Requirements  . . . . . . . . . . . . . . . . . .  1
+   2.1. Terminology and Other Conventions . . . . . . . . . . . . . .  1
+
+1. Introduction
+
+1.1. Purpose
+
+
+1.2. Protocol Overview
+
+
+2. Conformance Requirements
+
+   The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
+   "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this
+   document are to be interpreted as described in RFC 2119.
+
+2.1. Terminology and Other Conventions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Nishi                                                           [Page 1]
+GFSL                   The GoldFish Secure Layer               June 2025
+
+
+Authors' Addresses
+
+   Nishi
+   Pyrite Development Team
+   
+   Email: nishi@nishi.boats
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Nishi                                                           [Page 2]

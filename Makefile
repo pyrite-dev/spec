@@ -3,7 +3,7 @@ XML2TXT = xml2txt
 .PHONY: all
 .SUFFIXES: .xml .txt
 
-all: doc/control.txt
+all: doc/control.txt doc/secure.txt
 
 .xml.txt:
 	$(XML2TXT) $< > $@

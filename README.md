@@ -7,3 +7,4 @@ Protocol specifications are under CC0, and generated using [xml2txt](https://git
 ## Specifications
 
  - [The GoldFish Control Protocol](/doc/control.txt)
+ - [The GoldFish Secure Layer](/doc/secure.txt)

@@ -68,6 +68,32 @@
 ]]>
 					</RawContent>
 				</Center>
+
+				<Content>
+					Opcode: 32 bits
+				</Content>
+				<IndentSection>
+					<Content>
+						Defines the interpretation of the "data". MUST be big endian.
+						4 characters opcode which is used in document can be converted to the number using below method (C):
+					</Content>
+					<IndentSection>
+						<Content>
+							const char* method = "SRDY";
+							uint32_t number = *(uint32_t*)method;
+							number = htonl(number);
+						</Content>
+					</IndentSection>
+				</IndentSection>
+
+				<Content>
+					Length: 16 bits
+				</Content>
+				<IndentSection>
+					<Content>
+						Defines the length of the "data". MUST be big endian.
+					</Content>
+				</IndentSection>
 			</Section>
 			<Section Name="Request">
 				<Section Name="Request - Not Authenticated State">
@@ -80,8 +106,9 @@
 				</Section>
 			</Section>
 			<Section Name="Response">
-				<Section Name="SVRR response">
+				<Section Name="SRDY response">
 					<Content>
+						Indicates the server is ready to accept client requests.
 					</Content>
 				</Section>
 			</Section>

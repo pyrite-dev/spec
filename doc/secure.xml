@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE Specification SYSTEM "xml2txt.dtd">
+<Specification>
+	<Author>
+		<Name>Nishi</Name>
+		<Organization>Pyrite Development Team</Organization>
+		<Email>nishi@nishi.boats</Email>
+	</Author>
+	<Meta>
+		<Date>June 2025</Date>
+		<Title>The GoldFish Secure Layer</Title>
+		<Short>GFSL</Short>
+		<Organization>Pyrite Development Team</Organization>
+		<Authors>Nishi</Authors>
+	</Meta>
+	<Section Name="Abstract">
+		<Content>
+		</Content>
+	</Section>
+	<TOC />
+	<Numbered>
+		<Section Name="Introduction">
+			<Section Name="Purpose">
+				<Content>
+				</Content>
+			</Section>
+			<Section Name="Protocol Overview">
+				<Content>
+				</Content>
+			</Section>
+		</Section>
+		<Section Name="Conformance Requirements">
+			<Content>
+				The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
+			</Content>
+			<Section Name="Terminology and Other Conventions">
+			</Section>
+		</Section>
+	</Numbered>
+</Specification>
