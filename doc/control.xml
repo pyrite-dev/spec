@@ -39,6 +39,7 @@
 					The GFCP protocol is based on a request/response paradigm. A client establishes a connection with a server and waits until server sends ready packet, then start sending a request to the server. The server responds with a packet with same structure as client packet.
 
 					The GFCP protocol specifies TCP/IP port 7468 as default port.
+					The protocol MUST be handshaked using the GoldFish Secure Layer.
 				</Content>
 			</Section>
 		</Section>
