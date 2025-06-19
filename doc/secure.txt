@@ -6,22 +6,27 @@ Pyrite Development Team                                            Nishi
 
 Abstract
 
+   The GoldFish Secure Layer (GFSL) allows both a client and the server
+   to transfer data securely without implementing TLS/SSL.
 
 Table of Contents
 
    1.   Introduction  . . . . . . . . . . . . . . . . . . . . . . . .  1
    1.1. Purpose . . . . . . . . . . . . . . . . . . . . . . . . . . .  1
-   1.2. Protocol Overview . . . . . . . . . . . . . . . . . . . . . .  1
    2.   Conformance Requirements  . . . . . . . . . . . . . . . . . .  1
    2.1. Terminology and Other Conventions . . . . . . . . . . . . . .  1
+   3.   Protocol Overview . . . . . . . . . . . . . . . . . . . . . .  1
+   3.1. ClientHello Command . . . . . . . . . . . . . . . . . . . . .  2
+   3.2. ServerHello Command . . . . . . . . . . . . . . . . . . . . .  2
+   3.3. ClientAccept Command  . . . . . . . . . . . . . . . . . . . .  2
+   3.4. Bye Command . . . . . . . . . . . . . . . . . . . . . . . . .  2
 
 1. Introduction
 
 1.1. Purpose
 
-
-1.2. Protocol Overview
-
+   The GoldFish Secure Layer (GFSL) allows both a client and the server
+   to transfer data securely without implementing TLS/SSL.
 
 2. Conformance Requirements
 
@@ -31,32 +36,86 @@ Table of Contents
 
 2.1. Terminology and Other Conventions
 
+3. Protocol Overview
 
+      Client                                                 Server
+     
+      ClientHello
+      + Version
+      + Curve25519 Public Key   -------->
+                                                        ServerHello
+                                                          Version +
+                                <--------   Curve25519 Public Key +
+     
+      ClientAccept              -------->
+     
+      [Data]                    <------->                    [Data]
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                      Fig 1. Successful connection
 
 
 
 
 Nishi                                                           [Page 1]
+GFSL                   The GoldFish Secure Layer               June 2025
+
+
+      Client                                                 Server
+     
+      ClientHello
+      + Version
+      + Curve25519 Public Key   -------->
+                                                        ServerHello
+                                                          Version +
+                                <--------   Curve25519 Public Key +
+     
+      Bye                       -------->
+                                <--------                       Bye
+
+                         Fig 2. Bad connection
+
+   [Data] MUST be encrypted using AES256 with X25519 shared key as round
+   key.
+
+3.1. ClientHello Command
+
+   Usage: ClientHello <Version> <Public Key>
+
+   Sends version information and public key.
+   <Version> MUST be 1.
+   <Public Key> MUST be Curve25519 Public Key in hexadecimal format,
+   which must be 64 bytes.
+
+3.2. ServerHello Command
+
+   Usage: ServerHello <Version> <Public Key>
+
+   Sends version information and public key, also indicates that server
+   has accepted the client version and public key.
+   <Version> MUST be 1.
+   <Public Key> MUST be Curve25519 Public Key in hexadecimal format,
+   which must be 64 bytes.
+
+3.3. ClientAccept Command
+
+   Usage: ClientAccept
+
+   Indicate the version was accepted, and the public key was also
+   accepted.
+
+3.4. Bye Command
+
+   Usage: Bye
+
+   Request disconnect.
+
+
+
+
+
+
+
+Nishi                                                           [Page 2]
 GFSL                   The GoldFish Secure Layer               June 2025
 
 
@@ -115,4 +174,4 @@ Authors' Addresses
 
 
 
-Nishi                                                           [Page 2]
+Nishi                                                           [Page 3]

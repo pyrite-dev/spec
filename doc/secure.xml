@@ -15,6 +15,7 @@
 	</Meta>
 	<Section Name="Abstract">
 		<Content>
+			The GoldFish Secure Layer (GFSL) allows both a client and the server to transfer data securely without implementing TLS/SSL.
 		</Content>
 	</Section>
 	<TOC />
@@ -22,10 +23,7 @@
 		<Section Name="Introduction">
 			<Section Name="Purpose">
 				<Content>
-				</Content>
-			</Section>
-			<Section Name="Protocol Overview">
-				<Content>
+					The GoldFish Secure Layer (GFSL) allows both a client and the server to transfer data securely without implementing TLS/SSL.
 				</Content>
 			</Section>
 		</Section>
@@ -34,6 +32,89 @@
 				The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
 			</Content>
 			<Section Name="Terminology and Other Conventions">
+				TBD
+			</Section>
+		</Section>
+		<Section Name="Protocol Overview">
+			<Center>
+				<RawContent>
+<![CDATA[
+ Client                                                 Server 
+
+ ClientHello
+ + Version
+ + Curve25519 Public Key   -------->
+                                                   ServerHello
+                                                     Version +
+                           <--------   Curve25519 Public Key +
+
+ ClientAccept              -------->
+
+ [Data]                    <------->                    [Data]
+]]>
+				</RawContent>
+				<Content>
+					Fig 1. Successful connection
+				</Content>
+
+				<NewPage />
+				<RawContent>
+<![CDATA[
+ Client                                                 Server 
+
+ ClientHello
+ + Version
+ + Curve25519 Public Key   -------->
+                                                   ServerHello
+                                                     Version +
+                           <--------   Curve25519 Public Key +
+
+ Bye                       -------->
+                           <--------                       Bye
+]]>
+				</RawContent>
+				<Content>
+					Fig 2. Bad connection
+				</Content>
+			</Center>
+			<Content>
+				[Data] MUST be encrypted using AES256 with X25519 shared key as round key.
+			</Content>
+			<Section Name="ClientHello Command">
+				<Content>
+					Usage: ClientHello &lt;Version&gt; &lt;Public Key&gt;
+				</Content>
+				<Content>
+					Sends version information and public key.
+					&lt;Version&gt; MUST be 1.
+					&lt;Public Key&gt; MUST be Curve25519 Public Key in hexadecimal format, which must be 64 bytes.
+				</Content>
+			</Section>
+			<Section Name="ServerHello Command">
+				<Content>
+					Usage: ServerHello &lt;Version&gt; &lt;Public Key&gt;
+				</Content>
+				<Content>
+					Sends version information and public key, also indicates that server has accepted the client version and public key.
+					&lt;Version&gt; MUST be 1.
+					&lt;Public Key&gt; MUST be Curve25519 Public Key in hexadecimal format, which must be 64 bytes.
+				</Content>
+			</Section>
+			<Section Name="ClientAccept Command">
+				<Content>
+					Usage: ClientAccept
+				</Content>
+				<Content>
+					Indicate the version was accepted, and the public key was also accepted.
+				</Content>
+			</Section>
+			<Section Name="Bye Command">
+				<Content>
+					Usage: Bye
+				</Content>
+				<Content>
+					Request disconnect.
+				</Content>
 			</Section>
 		</Section>
 	</Numbered>
