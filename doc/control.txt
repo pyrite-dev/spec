@@ -16,12 +16,18 @@ Abstract
 
 Table of Contents
 
-   1.   Introduction  . . . . . . . . . . . . . . . . . . . . . . . .  1
-   1.1. Purpose . . . . . . . . . . . . . . . . . . . . . . . . . . .  1
-   1.2. Protocol Overview . . . . . . . . . . . . . . . . . . . . . .  1
-   2.   Conformance Requirements  . . . . . . . . . . . . . . . . . .  1
-   2.1. Terminology and Other Conventions . . . . . . . . . . . . . .  1
-   3.   Opening Handshake . . . . . . . . . . . . . . . . . . . . . .  1
+   1.     Introduction  . . . . . . . . . . . . . . . . . . . . . . .  1
+   1.1.   Purpose . . . . . . . . . . . . . . . . . . . . . . . . . .  1
+   1.2.   Protocol Overview . . . . . . . . . . . . . . . . . . . . .  1
+   2.     Conformance Requirements  . . . . . . . . . . . . . . . . .  1
+   2.1.   Terminology and Other Conventions . . . . . . . . . . . . .  1
+   3.     Protocol Structure  . . . . . . . . . . . . . . . . . . . .  2
+   3.1.   Frame . . . . . . . . . . . . . . . . . . . . . . . . . . .  2
+   3.2.   Request . . . . . . . . . . . . . . . . . . . . . . . . . .  2
+   3.2.1. Request - Not Authenticated State . . . . . . . . . . . . .  2
+   3.2.2. Request - Authenticated State . . . . . . . . . . . . . . .  2
+   3.3.   Response  . . . . . . . . . . . . . . . . . . . . . . . . .  2
+   3.3.1. SVRR response . . . . . . . . . . . . . . . . . . . . . . .  2
 
 1. Introduction
 
@@ -46,17 +52,70 @@ Table of Contents
    "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and "OPTIONAL" in this
    document are to be interpreted as described in RFC 2119.
 
-2.1. Terminology and Other Conventions
-
-3. Opening Handshake
-
-
-
 
 
 
 
 Nishi, et al                                                    [Page 1]
+GFCP                 The GoldFish Control Protocol             June 2025
+
+
+2.1. Terminology and Other Conventions
+
+3. Protocol Structure
+
+3.1. Frame
+
+    0                   1                   2                   3
+    0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
+   +---------------------------------------------------------------+
+   |                            opcode                             |
+   +-------------------------------+-------------------------------+
+   |            length             |             data              |
+   +-------------------------------+ - - - - - - - - - - - - - - - +
+   :                        data continued                         :
+   + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
+   |                        data continued                         |
+   +---------------------------------------------------------------+
+
+3.2. Request
+
+3.2.1. Request - Not Authenticated State
+
+
+3.2.2. Request - Authenticated State
+
+
+3.3. Response
+
+3.3.1. SVRR response
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Nishi, et al                                                    [Page 2]
 GFCP                 The GoldFish Control Protocol             June 2025
 
 
@@ -115,4 +174,4 @@ Authors' Addresses
 
 
 
-Nishi, et al                                                    [Page 2]
+Nishi, et al                                                    [Page 3]

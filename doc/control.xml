@@ -49,9 +49,42 @@
 			<Section Name="Terminology and Other Conventions">
 			</Section>
 		</Section>
-		<Section Name="Opening Handshake">
-			<Content>
-			</Content>
+		<Section Name="Protocol Structure">
+			<Section Name="Frame">
+				<Center>
+					<RawContent>
+<![CDATA[
+ 0                   1                   2                   3
+ 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
++---------------------------------------------------------------+
+|                            opcode                             |
++-------------------------------+-------------------------------+
+|            length             |             data              |
++-------------------------------+ - - - - - - - - - - - - - - - +
+:                        data continued                         :
++ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - +
+|                        data continued                         |
++---------------------------------------------------------------+
+]]>
+					</RawContent>
+				</Center>
+			</Section>
+			<Section Name="Request">
+				<Section Name="Request - Not Authenticated State">
+					<Content>
+					</Content>
+				</Section>
+				<Section Name="Request - Authenticated State">
+					<Content>
+					</Content>
+				</Section>
+			</Section>
+			<Section Name="Response">
+				<Section Name="SVRR response">
+					<Content>
+					</Content>
+				</Section>
+			</Section>
 		</Section>
 	</Numbered>
 </Specification>
